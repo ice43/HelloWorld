@@ -16,31 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-8V-iu6">
-                                <rect key="frame" x="116" y="123" width="161" height="607"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-8V-iu6">
+                                <rect key="frame" x="116" y="123" width="161" height="598"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-gU-c99">
-                                        <rect key="frame" x="0.6666666666666714" y="0.0" width="160" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="511"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-lE-OMA">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-lE-OMA">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-cx-kBt">
-                                                <rect key="frame" x="0.0" y="180" width="160" height="160"/>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-cx-kBt">
+                                                <rect key="frame" x="0.0" y="177" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-HX-o3t">
-                                                <rect key="frame" x="0.0" y="360" width="160" height="160"/>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-HX-o3t">
+                                                <rect key="frame" x="0.0" y="354" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyX-fK-r20">
-                                        <rect key="frame" x="55" y="574" width="51" height="33"/>
+                                        <rect key="frame" x="0.0" y="565" width="161" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTW-Ce-6cw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -48,12 +51,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
-                            <constraint firstItem="vRT-8V-iu6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="ZUL-wF-rqN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vRT-8V-iu6" secondAttribute="trailing" constant="116" id="lLd-Dc-sVI"/>
-                            <constraint firstItem="vRT-8V-iu6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="mdf-N3-mCA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vRT-8V-iu6" secondAttribute="bottom" constant="88" id="t6z-l9-8jQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vRT-8V-iu6" secondAttribute="bottom" constant="97" id="RtF-tw-1LT"/>
+                            <constraint firstItem="vRT-8V-iu6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="UPU-3B-VJu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vRT-8V-iu6" secondAttribute="trailing" constant="116" id="bLA-Ie-hp4"/>
+                            <constraint firstItem="vRT-8V-iu6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="ldS-WC-wSB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="h4f-HX-o3t" id="UuY-yg-lFg"/>
+                        <outlet property="redView" destination="ygd-lE-OMA" id="hbE-MI-afj"/>
+                        <outlet property="smartButton" destination="IyX-fK-r20" id="f4u-Rf-bd2"/>
+                        <outlet property="yellowView" destination="UAO-cx-kBt" id="GIT-Kt-Fhs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
