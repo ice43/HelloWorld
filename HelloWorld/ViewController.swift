@@ -17,9 +17,14 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redView.layer.cornerRadius = 80
-        yellowView.layer.cornerRadius = 80
-        greenView.layer.cornerRadius = 80
+        redView.layoutIfNeeded()
+        redView.layer.cornerRadius = redView.frame.width / 2
+        
+        yellowView.layoutIfNeeded()
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        
+        greenView.layoutIfNeeded()
+        greenView.layer.cornerRadius = greenView.frame.width / 2
         
         startButton.backgroundColor = .systemBlue
         startButton.layer.cornerRadius = 10
@@ -51,4 +56,3 @@ final class ViewController: UIViewController {
     }
     
 }
-
