@@ -26,11 +26,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                             </view>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-cx-kBt">
+                                            <view alpha="0.29999999999999999" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-cx-kBt">
                                                 <rect key="frame" x="0.0" y="177" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </view>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-HX-o3t">
+                                            <view alpha="0.29999999999999999" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-HX-o3t">
                                                 <rect key="frame" x="0.0" y="354" width="161" height="157"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                             </view>
@@ -40,7 +40,9 @@
                                         <rect key="frame" x="0.0" y="565" width="161" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTW-Ce-6cw"/>
                                         </connections>
@@ -60,7 +62,7 @@
                     <connections>
                         <outlet property="greenView" destination="h4f-HX-o3t" id="UuY-yg-lFg"/>
                         <outlet property="redView" destination="ygd-lE-OMA" id="hbE-MI-afj"/>
-                        <outlet property="smartButton" destination="IyX-fK-r20" id="f4u-Rf-bd2"/>
+                        <outlet property="startButton" destination="IyX-fK-r20" id="SbU-Yp-C25"/>
                         <outlet property="yellowView" destination="UAO-cx-kBt" id="GIT-Kt-Fhs"/>
                     </connections>
                 </viewController>
